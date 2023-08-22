@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-color: whitesmoke;
+            background-color: white;
         }
 
         header {
@@ -18,19 +18,28 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
         }
 
         .menu {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
         }
 
-        .menu > a {
+        .menu>a {
             color: rgb(27, 41, 96);
-            font-size: 25px;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 15px;
+            border-left: 1px solid rgba(3, 41, 74, 0.876);
         }
 
+        .menu>a:first-child {
+            border-left: none;
+        }
 
         nav {
             margin: 10px;
@@ -41,27 +50,73 @@
             height: 100px;
         }
 
+        .search-form {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-form-input {
+            font-size: 14px;
+            border-radius: 100px;
+            line-height: 1.5;
+            padding: 10px 15px;
+            transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+            border: 1px solid #dee1e2;
+            color: rgb(6, 6, 175);
+            background: #dee1e2;
+            height: 15px;
+            text-align: left;
+
+            :hover {
+                border-color: #ccc;
+            }
+
+            :focus {
+                border-color: #9147ff;
+                background: #fff;
+            }
+        }
+
+        .search-button {
+            outline: none;
+            cursor: pointer;
+            font-weight: 100;
+            border-radius: 100px;
+            padding: 5px 20px;
+            border: 0;
+            color: #fff;
+            background: #01265a;
+            line-height: 1.15;
+            font-size: 14px;
+            height: 35px;
+            :hover {
+                transition: all .1s ease;
+                box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
+
         <img id="logo" src="https://www.svgrepo.com/show/227091/bird.svg" alt="Logo JoanaMorais" class="logo">
-        <nav class="menu">
+
+        <nav class="menu" style=" font-family: Lucida Console, Courier New, monospace; text-transform: uppercase;">
             <a href="#">Início </a>
             <a href="#">Portfólio</a>
             <a href="#">Produtos</a>
             <a href="#">Sobre</a>
             <a href="#">Contato</a>
         </nav>
+
         <div class="search-input">
-
             <form action="/search" method="get">
-                <input type="text" name="q" placeholder="Digite sua busca...">
-                <button type="submit">Buscar</button>
+                <input class="search-form-input" type="text" name="q" placeholder="Digite sua busca...">
+                <button class="search-button" type="submit">Buscar</button>
             </form>
-
         </div>
+
     </header>
 </body>
 
