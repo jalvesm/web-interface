@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha página</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+
+        header {
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu > a {
+            color: rgb(27, 41, 96);
+            font-size: 25px;
+        }
+
+
+        nav {
+            margin: 10px;
+        }
+
+        #logo {
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="https://www.svgrepo.com/show/227091/bird.svg" alt="Logo JoanaMorais" class="logo">
+        <nav class="menu">
+            <a href="#">Início </a>
+            <a href="#">Portfólio</a>
+            <a href="#">Produtos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+        <div class="search-input">
+
+            <form action="/search" method="get">
+                <input type="text" name="q" placeholder="Digite sua busca...">
+                <button type="submit">Buscar</button>
+            </form>
+
+        </div>
+    </header>
+</body>
+
+</html>
