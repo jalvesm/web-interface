@@ -6,95 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha página</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background-color: white;
-        }
-
-        header {
-            margin: auto;
-            padding: 20px;
-            background-color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-        }
-
-        .menu {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-        }
-
-        .menu>a {
-            color: rgb(27, 41, 96);
-            font-size: 20px;
-            text-decoration: none;
-            padding: 15px;
-            border-left: 1px solid rgba(3, 41, 74, 0.876);
-        }
-
-        .menu>a:first-child {
-            border-left: none;
-        }
-
-        nav {
-            margin: 10px;
-        }
-
-        #logo {
-            width: 100px;
-            height: 100px;
-        }
-
-        .search-form {
-            display: flex;
-            align-items: center;
-        }
-
-        .search-form-input {
-            font-size: 14px;
-            border-radius: 100px;
-            line-height: 1.5;
-            padding: 10px 15px;
-            transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
-            border: 1px solid #dee1e2;
-            color: rgb(6, 6, 175);
-            background: #dee1e2;
-            height: 15px;
-            text-align: left;
-
-            :hover {
-                border-color: #ccc;
-            }
-
-            :focus {
-                border-color: #9147ff;
-                background: #fff;
-            }
-        }
-
-        .search-button {
-            outline: none;
-            cursor: pointer;
-            font-weight: 100;
-            border-radius: 100px;
-            padding: 5px 20px;
-            border: 0;
-            color: #fff;
-            background: #01265a;
-            line-height: 1.15;
-            font-size: 14px;
-            height: 35px;
-            :hover {
-                transition: all .1s ease;
-                box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -118,6 +29,22 @@
         </div>
 
     </header>
+
+    <main class="main-content">
+        <section class="cards-section"></section>
+        <div class="cards-group"></div>
+        <aside class="aside-menu">
+            <nav class="menu-list" style=" font-family: Lucida Console, Courier New, monospace; text-transform: uppercase;">
+                <li><a href="#">Início </a></li>
+                <li><a href="#">Início </a></li>
+                <li><a href="#">Início </a></li>
+                <li><a href="#">Início </a></li>
+                <li><a href="#">Início </a></li>
+            </nav>
+
+        </aside>
+    </main>
+
 </body>
 
 </html>

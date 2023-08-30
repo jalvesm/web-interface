@@ -1,0 +1,120 @@
+/* GENERAL */
+body {
+    background-color: white;
+}
+
+header {
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.menu>a {
+    color: rgb(27, 41, 96);
+    font-size: 20px;
+    text-decoration: none;
+    padding: 15px;
+    border-left: 1px solid rgba(3, 41, 74, 0.876);
+}
+
+.menu>a:first-child {
+    border-left: none;
+}
+
+nav {
+    margin: 10px;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form-input {
+    font-size: 14px;
+    border-radius: 100px;
+    line-height: 1.5;
+    padding: 10px 15px;
+    transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+    border: 1px solid #dee1e2;
+    color: rgb(6, 6, 175);
+    background: #dee1e2;
+    height: 15px;
+    text-align: left;
+    :hover {
+        border-color: #ccc;
+    }
+    :focus {
+        border-color: #9147ff;
+        background: #fff;
+    }
+}
+
+.search-button {
+    outline: none;
+    cursor: pointer;
+    font-weight: 100;
+    border-radius: 100px;
+    padding: 5px 20px;
+    border: 0;
+    color: #fff;
+    background: #01265a;
+    line-height: 1.15;
+    font-size: 14px;
+    height: 35px;
+    :hover {
+        transition: all .1s ease;
+        box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+    }
+}
+
+/* MAIN */
+
+.main-content {
+    border: 1px solid red;
+    min-height: 200px;
+    display: flex;
+    height: calc(100vh - 140px);
+}
+
+.cards-section {
+    background-color: #444;
+    min-height: 200px;
+    width: 70%;
+}
+
+.aside-menu {
+
+    min-height: 200px;
+    width: 30%;
+}
+
+.menu-list {
+    color: black;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list li > a {
+    color: rgb(0, 0, 0);
+    font-family: 'Cairo', sans-serif;
+}
+
