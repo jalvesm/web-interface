@@ -1,0 +1,12 @@
+/* GENERAL */
+body {
+    background-color: #f9f9f9;
+    margin: auto;
+}
+
+
+.card-img-top {
+    width: 400px; /* Largura desejada */
+    height: 300px; /* Altura desejada */
+    object-fit:fill;
+}
