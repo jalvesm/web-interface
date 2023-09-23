@@ -4,9 +4,8 @@ body {
     margin: auto;
 }
 
-
 .card-img-top {
-    width: 400px; /* Largura desejada */
-    height: 300px; /* Altura desejada */
+    width: 400px;
+    height: 300px;
     object-fit:fill;
 }
