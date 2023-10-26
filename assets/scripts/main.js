@@ -1,1 +1,1 @@
-alert('main.js foi carregado!')
+console.log("o arquivo main.js foi carregado!")
