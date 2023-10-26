@@ -1,6 +1,6 @@
 /* GENERAL */
 /* NAVBAR */
-.counter{
+.counter {
     width: 18px;
     height: 18px;
     background-color: red;
@@ -11,7 +11,16 @@
     top: -9px;
     right: -9px;
 }
+
+/* BODY */
 body {
     background-color: #f1f1f1;
     margin: auto;
+}
+
+.card-img-top {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
 }
