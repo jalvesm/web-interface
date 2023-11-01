@@ -17,6 +17,7 @@ body {
     margin: auto;
 }
 
+/* CARDS */
 .card-container {
     display: flex;
     justify-content: space-between;
@@ -25,4 +26,8 @@ body {
 
 .card {
     margin: 10px;
+}
+
+.added {
+    opacity: 0.5;
 }
