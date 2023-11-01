@@ -79,5 +79,4 @@ function updateCounter() {
     counter.textContent = cartCounter;
 }
 
-// Inicializa a renderização da seção de cartões com 9 cartões.
 renderCardsSection(9);
