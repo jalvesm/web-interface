@@ -1,15 +1,20 @@
+// JavaScript Code Documentation (en-uk)
+
 // Global variable that keeps track of the cart counter.
 let cartCounter = 0;
 
 /**
- * Creates and renders a card based on the provided index.
- * @param {number} index - The index of the card.
- * @returns {HTMLElement} - The HTML element representing the card.
+ * Generates an HTML card element for a product.
+ *
+ * @param {Object} product - The product object containing details like name, description, and price.
+ * @returns {HTMLDivElement} - The card element representing the product.
  */
 function renderCard(product) {
+    // Create a new card div element.
     const cardDiv = document.createElement("div");
     cardDiv.className = "col-md-3 col-sm-6 mb-3";
 
+    // Populate the card div with HTML content.
     cardDiv.innerHTML = `
     <div class="card">
           <img src="${product.mainImageURL}" class="card-img-top object-fit-cover" alt="Card image cap"
@@ -31,10 +36,10 @@ function renderCard(product) {
 }
 
 /**
- * Toggles the "Add to Cart" button state between "Add" and "Remove".
- * It also updates the cart counter.
- * @param {HTMLElement} cardDiv - The card's HTML element.
- * @param {HTMLElement} cartButton - The cart button.
+ * Toggles the state of the "Add to Cart" button between "Add" and "Remove".
+ *
+ * @param {HTMLDivElement} cardDiv - The card element associated with the product.
+ * @param {HTMLButtonElement} cartButton - The "Add to Cart" button element.
  */
 function toggleCartButton(cardDiv, cartButton) {
     const action = cartButton.getAttribute("data-action");
@@ -55,12 +60,12 @@ function toggleCartButton(cardDiv, cartButton) {
         cartCounter--;
     }
 
+    // Update the cart counter display.
     updateCounter();
 }
 
 /**
- * Renders a section of cards based on the specified number of cards.
- * @param {number} numCards - The number of cards to be rendered.
+ * Renders a section of product cards on the web page.
  */
 async function renderCardsSection() {
     const cardContainer = document.getElementById('card-container');
@@ -72,18 +77,24 @@ async function renderCardsSection() {
     }
 }
 
+/**
+ * Asynchronously fetches product data from a JSON file.
+ *
+ * @returns {Promise} - A promise that resolves to an array of product objects.
+ */
 async function fetchProducts() {
-    const response = await fetch('/data/data.json')
+    const response = await fetch('/data/data.json');
     const data = await response.json();
     return data;
 }
 
 /**
- * Updates the cart counter on the appropriate HTML element.
+ * Updates the cart counter display on the web page.
  */
 function updateCounter() {
     const counter = document.querySelector(".counter");
     counter.textContent = cartCounter;
 }
 
-renderCardsSection(9);
+// Trigger the rendering of product cards.
+renderCardsSection();
