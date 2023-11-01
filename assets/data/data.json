@@ -1,0 +1,72 @@
+[
+    {
+        "id": "1",
+        "name": "Notebook",
+        "price": 100,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua in culpa qui officia deserunt mollit anim id est laborum.",
+        "mainImageURL": "https://picsum.photos/id/0/200/300",
+        "category": "Computadores & tecnologia",
+        "images": [
+            "https://picsum.photos/id/1/200/300",
+            "https://picsum.photos/id/2/200/300",
+            "https://picsum.photos/id/3/200/300",
+            "https://picsum.photos/id/4/200/300"
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Smartphone",
+        "price": 800,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "mainImageURL": "https://picsum.photos/id/22/200/300",
+        "category": "Telefonia",
+        "images": [
+            "https://picsum.photos/id/23/200/300",
+            "https://picsum.photos/id/24/200/300",
+            "https://picsum.photos/id/25/200/300",
+            "https://picsum.photos/id/26/200/300"
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Tablet",
+        "price": 400,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam ariatur.",
+        "mainImageURL": "https://picsum.photos/id/33/200/300",
+        "category": "Computadores & tecnologia",
+        "images": [
+            "https://picsum.photos/id/34/200/300",
+            "https://picsum.photos/id/35/200/300",
+            "https://picsum.photos/id/36/200/300",
+            "https://picsum.photos/id/37/200/300"
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Câmera Digital",
+        "price": 350,
+        "description": "Uma câmera digital de alta qualidade para capturar momentos especiais. Fácil de usar e com muitos recursos.",
+        "mainImageURL": "https://picsum.photos/id/44/200/300",
+        "category": "Fotografia",
+        "images": [
+            "https://picsum.photos/id/45/200/300",
+            "https://picsum.photos/id/46/200/300",
+            "https://picsum.photos/id/47/200/300",
+            "https://picsum.photos/id/48/200/300"
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Fones de Ouvido Bluetooth",
+        "price": 60,
+        "description": "Fones de ouvido sem fio com qualidade de som excepcional. Perfeitos para ouvir música em movimento.",
+        "mainImageURL": "https://picsum.photos/id/55/200/300",
+        "category": "Áudio",
+        "images": [
+            "https://picsum.photos/id/56/200/300",
+            "https://picsum.photos/id/57/200/300",
+            "https://picsum.photos/id/58/200/300",
+            "https://picsum.photos/id/59/200/300"
+        ]
+    }
+]

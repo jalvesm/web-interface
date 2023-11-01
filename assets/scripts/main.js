@@ -6,18 +6,18 @@ let cartCounter = 0;
  * @param {number} index - The index of the card.
  * @returns {HTMLElement} - The HTML element representing the card.
  */
-function renderCard(index) {
+function renderCard(product) {
     const cardDiv = document.createElement("div");
     cardDiv.className = "col-md-3 col-sm-6 mb-3";
 
     cardDiv.innerHTML = `
     <div class="card">
-          <img src="https://picsum.photos/id/${index + 910}/200/300" class="card-img-top object-fit-cover" alt="Card image cap"
+          <img src="${product.mainImageURL}" class="card-img-top object-fit-cover" alt="Card image cap"
             height="200px">
           <div class="card-body">
-            <h5 class="card-title">Card ${index}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
+            <h5 class="card-title">${product.name}</h5>
+            <p class="card-text">${product.description}</p>
+            <p class="card-text"><b>R$${product.price},00</b></p>
             <button class="btn btn-primary cart-button" data-action="add">Add to Cart</button>
           </div>
     </div>
@@ -62,13 +62,20 @@ function toggleCartButton(cardDiv, cartButton) {
  * Renders a section of cards based on the specified number of cards.
  * @param {number} numCards - The number of cards to be rendered.
  */
-function renderCardsSection(numCards) {
+async function renderCardsSection() {
     const cardContainer = document.getElementById('card-container');
+    const products = await fetchProducts();
 
-    for (let i = 0; i < numCards; i++) {
-        const card = renderCard(i + 1);
+    for (let i = 0; i < products.length; i++) {
+        const card = renderCard(products[i]);
         cardContainer.appendChild(card);
     }
+}
+
+async function fetchProducts() {
+    const response = await fetch('/data/data.json')
+    const data = await response.json();
+    return data;
 }
 
 /**
