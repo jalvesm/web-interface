@@ -1,5 +1,3 @@
-// JavaScript Code Documentation (en-uk)
-
 // Global variable that keeps track of the cart counter.
 let cartCounter = 0;
 
@@ -23,7 +21,8 @@ function renderCard(product) {
             <h5 class="card-title">${product.name}</h5>
             <p class="card-text">${product.description}</p>
             <p class="card-text"><b>R$${product.price},00</b></p>
-            <button class="btn btn-primary cart-button" data-action="add">Add to Cart</button>
+            <button class="btn btn-primary btn-sm cart-button" data-action="add">Add to Cart</button>
+            <button type="button" class="btn btn-secondary btn-sm">View details</button>
           </div>
     </div>
     `;
@@ -83,7 +82,7 @@ async function renderCardsSection() {
  * @returns {Promise} - A promise that resolves to an array of product objects.
  */
 async function fetchProducts() {
-    const response = await fetch('/data/data.json');
+    const response = await fetch('./data/data.json');
     const data = await response.json();
     return data;
 }
