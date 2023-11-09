@@ -12,7 +12,7 @@ function updateProductDetails(product) {
     }
 }
 
-// existe ou não?
+
 function updateAdditionalImages(images) {
     const imageList = document.getElementById('imageList');
     imageList.innerHTML = '';
