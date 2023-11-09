@@ -24,13 +24,23 @@ function updateAdditionalImages(images) {
         image.src = imageURL;
         image.className = 'w-100 object-fit-cover';
         image.height = '300';
-        
+        imageCol.appendChild(image);
+        imageList.appendChild(imageCol);
     });
 }
 
 async function fetchProductDetails(productId){
-    const response = await fetch('https://fakestoreapi.com/products');
+    const response = await fetch('./data/data.json');
     const data = await response.json();
     const product = data.find((product) => product.id === parseInt(productId));
     return product;
 }
+
+
+const productId = 1;
+
+fetchProductDetails(productId)
+  .then(updateProductDetails)
+  .catch((error) => {
+    console.error(error);
+  });

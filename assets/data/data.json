@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "name": "Notebook",
         "price": 100,
         "description": "Our notebook is the perfect blend of power and portability. With an elegant design and exceptional performance, it's ideal for work or on-the-go entertainment. Featuring a crisp display and a comfortable keyboard, you'll have a top-tier computing experience.",
@@ -14,7 +14,7 @@
         ]
     },
     {
-        "id": "2",
+        "id": 2,
         "name": "Smartphone",
         "price": 800,
         "description": "Our smartphone delivers the best in mobile technology. With a high-resolution camera, a fast processor, and a vibrant screen, you can capture incredible moments and enjoy apps and media with ease. It's the perfect companion for the digital lifestyle.",
@@ -28,7 +28,7 @@
         ]
     },
     {
-        "id": "3",
+        "id": 3,
         "name": "Tablet",
         "price": 400,
         "description": "Our tablet is your window to the digital world. With a high-quality touch screen and agile performance, it's perfect for web browsing, video watching, gaming, and more. Its portability makes it convenient for use anywhere.",
@@ -42,7 +42,7 @@
         ]
     },
     {
-        "id": "4",
+        "id": 4,
         "name": "Digital Camera",
         "price": 350,
         "description": "Our digital camera is a gateway to capturing life's precious moments. With high-resolution imaging and advanced features, it's your perfect companion for photography. Whether you're a professional or an enthusiast, this camera delivers stunning shots and allows you to express your creativity.",
@@ -56,7 +56,7 @@
         ]
     },
     {
-        "id": "5",
+        "id": 5,
         "name": "Bluetooth Headphones",
         "price": 60,
         "description": "Our Bluetooth headphones redefine your audio experience. With wireless connectivity, high-fidelity sound, and comfortable over-ear design, they are perfect for music lovers and audiophiles. You can enjoy your favourite tunes and podcasts with the freedom of wireless convenience, making them a must-have accessory for your daily life.",
