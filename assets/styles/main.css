@@ -25,9 +25,18 @@ body {
 }
 
 .card {
+    height: 600px;
     margin: 10px;
 }
 
+.card-text {
+    height: 100px;
+    overflow: auto;
+}
+
+.card-title {
+    height: 100px;
+}
 .added {
     opacity: 0.5;
 }
