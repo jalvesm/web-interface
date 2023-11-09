@@ -22,7 +22,7 @@ function renderCard(product) {
             <p class="card-text">${product.description}</p>
             <p class="card-text"><b>R$${product.price},00</b></p>
             <button class="btn btn-primary btn-sm cart-button" data-action="add">Add to Cart</button>
-            <button type="button" class="btn btn-secondary btn-sm">View details</button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="redirectToDetails()">View details</button>
           </div>
     </div>
     `;
@@ -94,6 +94,12 @@ function updateCounter() {
     const counter = document.querySelector(".counter");
     counter.textContent = cartCounter;
 }
+
+function redirectToDetails() {
+    // Use window.location.href to navigate to details.html
+    window.location.href = 'details.html';
+}
+
 
 // Trigger the rendering of product cards.
 renderCardsSection();

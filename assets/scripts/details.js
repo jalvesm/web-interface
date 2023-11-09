@@ -6,7 +6,7 @@ function updateProductDetails(product) {
         document.getElementById('productCategory').textContent = product.category;
         document.getElementById('productPrice').textContent = `R$${product.price}`;
 
-        updateAdditionalImages(product.mainImageURL);
+        updateAdditionalImages(product.images);
     } else {
         alert("Product not found!")
     }
