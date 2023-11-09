@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Notebook",
-        "price": 100,
+        "price": 1200,
         "description": "Our notebook is the perfect blend of power and portability. With an elegant design and exceptional performance, it's ideal for work or on-the-go entertainment. Featuring a crisp display and a comfortable keyboard, you'll have a top-tier computing experience.",
         "mainImageURL": "https://picsum.photos/id/0/200/300",
         "category": "Computadores & tecnologia",

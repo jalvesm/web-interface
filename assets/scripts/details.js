@@ -1,12 +1,12 @@
 function updateProductDetails(product) {
     if (product) {
         document.getElementById('productName').textContent = product.title;
-        document.getElementById('productImage').src = product.image;
+        document.getElementById('productImage').src = product.mainImageURL;
         document.getElementById('productDescription').textContent = product.description;
         document.getElementById('productCategory').textContent = product.category;
-        document.getElementById('productPrice').textContent = product.price;
+        document.getElementById('productPrice').textContent = `R$${product.price}`;
 
-        updateAdditionalImages(product.images);
+        updateAdditionalImages(product.mainImageURL);
     } else {
         alert("Product not found!")
     }
