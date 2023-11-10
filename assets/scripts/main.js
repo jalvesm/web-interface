@@ -23,7 +23,7 @@ function renderCard(product) {
             <p class="card-text">${product.description}</p>
             <p class="card-text"><b>£${product.price},00</b><br>
             <button class="btn btn-primary btn-sm cart-button" data-action="add">Add to Cart</button>
-            <button type="button" class="btn btn-secondary btn-sm" onclick="redirectToDetails()">View details</button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="redirectToDetails(${product.id})">View details</button>
           </div>
     </div>
     `;
@@ -101,7 +101,7 @@ async function renderCardsSection() {
  * @returns {Promise} - A promise that resolves to an array of product objects.
  */
 async function fetchProducts() {
-    const response = await fetch('https://fakestoreapi.com/products/');
+    const response = await fetch('https://fakestoreapi.com/products');
     const data = await response.json();
     return data;
 }
@@ -114,11 +114,10 @@ function updateCounter() {
     counter.textContent = cartCounter;
 }
 
-function redirectToDetails() {
-    // Use window.location.href to navigate to details.html
-    window.location.href = 'details.html';
+function redirectToDetails(productId) {
+    // Use window.location.href para navegar para details.html com o ID do produto.
+    window.location.href = `details.html?id=${productId}`;
 }
-
 
 // Trigger the rendering of product cards.
 renderCardsSection();
