@@ -1,46 +1,27 @@
 function updateProductDetails(product) {
     if (product) {
         document.getElementById('productName').textContent = product.title;
-        document.getElementById('productImage').src = product.mainImageURL;
+        document.getElementById('productImage').src = product.image;
         document.getElementById('productDescription').textContent = product.description;
         document.getElementById('productCategory').textContent = product.category;
-        document.getElementById('productPrice').textContent = `R$${product.price}`;
-
-        updateAdditionalImages(product.mainImageURL);
+        document.getElementById('productPrice').textContent = `£${product.price}`;
     } else {
         alert("Product not found!")
     }
 }
 
-
-function updateAdditionalImages(images) {
-    const imageList = document.getElementById('imageList');
-    imageList.innerHTML = '';
-
-    images.forEach((imageURL) => {
-        const imageCol = document.createElement('div');
-        imageCol.className = 'col-md-4';
-        const image = document.createElement('img');
-        image.src = imageURL;
-        image.className = 'w-100 object-fit-cover';
-        image.height = '300';
-        imageCol.appendChild(image);
-        imageList.appendChild(imageCol);
-    });
-}
-
-async function fetchProductDetails(productId){
-    const response = await fetch('./data/data.json');
-    const data = await response.json();
-    const product = data.find((product) => product.id === parseInt(productId));
+async function fetchProductDetails(productId) {
+    const response = await fetch(`https://fakestoreapi.com/products/${productId}`);
+    const product = await response.json();
     return product;
 }
 
 
-const productId = 1;
+async function renderDetails() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+    const product = await fetchProductDetails(productId);
+    updateProductDetails(product);
+}
 
-fetchProductDetails(productId)
-  .then(updateProductDetails)
-  .catch((error) => {
-    console.error(error);
-  });
+renderDetails();
